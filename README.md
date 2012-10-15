@@ -1,4 +1,4 @@
-# Versioner
+# versioner-rails
 
 Simple versioning solution for Rails apps.
 
@@ -6,7 +6,7 @@ Simple versioning solution for Rails apps.
 
 Add this line to your application's Gemfile:
 
-    gem 'versioner'
+    gem 'versioner-rails'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install versioner
+    $ gem install versioner-rails
 
 ## Usage
 
@@ -27,3 +27,7 @@ Or install it yourself as:
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## License
+
+Coming soon.
