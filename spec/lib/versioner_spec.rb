@@ -1,21 +1,41 @@
 require 'spec_helper'
 
 describe Versioner do
-  it "should report a default version if none is set" do
-    version = Versioner.version
-    version.should == "0.0.0"
+  describe "getting a version if none is set" do
+    subject { Versioner.version }
+    it { should == "0.0.1" }
   end
 
-  it "should set the current version via force" do
-    Versioner.force "0.0.1"
-    version = Versioner.version
-    version.should == "0.0.1"
+  describe "forcing the version" do
+    before { Versioner.force 1, 0, 0 }
+    subject { Versioner.version }
+    it { should == "1.0.0" }
   end
 
-  it "should increment the major version" do
-    Versioner.force "0.0.1"
-    Versioner.increment_major
-    version = Versioner.version
-    version.should == "1.0.1"
+  describe "incrementing the major version" do
+    before do
+      Versioner.force 1, 0, 1
+      Versioner.increment_major
+    end
+    subject { Versioner.version }
+    it { should == "2.0.1" }
+  end
+
+  describe "incrementing the minor version" do
+    before do
+      Versioner.force 1, 0, 1
+      Versioner.increment_minor
+    end
+    subject { Versioner.version }
+    it { should == "1.1.1" }
+  end
+
+  describe "incrementing the patch version" do
+    before do
+      Versioner.force 2, 3, 1
+      Versioner.increment_patch
+    end
+    subject { Versioner.version }
+    it { should == "2.3.2" }
   end
 end
