@@ -1,6 +1,6 @@
 # versioner-rails
 
-Simple versioning solution for Rails apps.
+This gem allows you to easily add, update, and retrieve a version number for your Rails application.
 
 ## Installation
 
@@ -18,7 +18,25 @@ Or install it yourself as:
 
 ## Usage
 
+Version numbers follow the format *Major.Minor.Patch*.
 
+Force a new version number like this:
+
+    $ rake versioner:force[1, 0, 3]
+
+Then you can update it:
+
+    $ rake versioner:increment_major
+    $ rake versioner:increment_minor
+    $ rake versioner:increment_patch
+
+And get it:
+
+    $ rake versioner:version
+
+Within your Rails app, you can use the following to get your app's version as a string:
+
+    Versioner.version
 
 ## Contributing
 
