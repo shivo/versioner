@@ -9,5 +9,9 @@ module Versioner
     def create_version_file
       template 'config/versioner.yml.erb', 'config/versioner.yml'
     end
+
+    def create_initializer
+      template 'config/initializers/versioner.rb.erb', 'config/initializers/versioner.rb'
+    end
   end
 end

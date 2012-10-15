@@ -19,5 +19,12 @@ describe Versioner::InstallGenerator do
       it { should contain "minor: 0" }
       it { should contain "patch: 1" }
     end
+
+    describe 'config/initializers/versioner.rb' do
+      subject { file('config/initializers/versioner.rb') }
+      it { should exist }
+      it { should contain "Versioner.configure do |config|" }
+      it { should contain "storage_path"}
+    end
   end
 end

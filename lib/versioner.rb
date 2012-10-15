@@ -26,6 +26,18 @@ module Versioner
       api.increment_patch
     end
 
+    def config
+      @config ||= Configuration.new
+    end
+
+    def configure
+      yield config
+    end
+
+    delegate :storage_path, :to => :config
+  end
+
+  class Configuration
     def storage_path
       @storage_path ||= Rails.root.join("config", "versioner.yml")
     end
