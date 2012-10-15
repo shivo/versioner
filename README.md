@@ -16,6 +16,10 @@ Or install it yourself as:
 
     $ gem install versioner-rails
 
+Then run the installer:
+
+    $ rails generate versioner:install
+
 ## Usage
 
 Version numbers follow the format *Major.Minor.Patch*.
@@ -37,6 +41,12 @@ And get it:
 Within your Rails app, you can use the following to get your app's version as a string:
 
     Versioner.version
+
+## Details
+
+Right now, the version is stored in YAML format, by default under config/versioner.yml. This location can be changed in config/initializers/versioner.rb.
+
+More storage back-end options are coming.
 
 ## Contributing
 
