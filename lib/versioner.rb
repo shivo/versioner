@@ -1,4 +1,4 @@
-require "versioner/version"
+require "versioner/versioner_api"
 
 module Versioner
   

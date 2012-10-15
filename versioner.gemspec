@@ -1,11 +1,10 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'versioner/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "versioner"
-  gem.version       = Versioner::VERSION
+  gem.version       = "0.0.1"
   gem.authors       = ["Joshua Rieken @ ChaiONE"]
   gem.email         = ["joshua@joshuarieken.com"]
   gem.summary       = %q{Rails apps versioner}
