@@ -1,6 +1,6 @@
 # Versioner
 
-TODO: Write a gem description
+Simple versioning solution for Rails apps.
 
 ## Installation
 
@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+
 
 ## Contributing
 
