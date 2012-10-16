@@ -1,4 +1,5 @@
-require "versioner/versioner_yaml"
+require 'railtie'
+require 'versioner/versioner_yaml'
 
 module Versioner
   class << self
