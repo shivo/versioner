@@ -42,18 +42,22 @@ module Versioner
       self.major = major
       self.minor = minor
       self.patch = patch
+      version
     end
 
     def increment_major
       self.major = major + 1
+      version
     end
 
     def increment_minor
       self.minor = minor + 1
+      version
     end
 
     def increment_patch
       self.patch = patch + 1
+      version
     end
 
     private

@@ -1,22 +1,22 @@
 namespace :versioner do
   desc "Get the app's version number"
   task :version => :environment do
-    Versioner.version
+    puts Versioner.version
   end
 
   desc "Increment the major version number by 1"
   task :increment_major => :environment do
-    Versioner.increment_major
+    puts Versioner.increment_major
   end
 
   desc "Increment the minor version number by 1"
   task :increment_minor => :environment do
-    Versioner.increment_minor
+    puts Versioner.increment_minor
   end
 
   desc "Increment the patch version number by 1"
   task :increment_patch => :environment do
-    Versioner.increment_patch
+    puts Versioner.increment_patch
   end
 
   desc "Force a new version number (required: major, minor, patch)"
