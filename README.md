@@ -70,4 +70,4 @@ More storage back-end options are coming.
 
 ## License
 
-Coming soon.
+MIT
