@@ -4,7 +4,7 @@ require 'versioner/versioner_yaml'
 module Versioner
   class << self
     def api
-      @api ||= YamlBackend.new(storage_path)
+      @api = YamlBackend.new(storage_path)
     end
 
     def version
