@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Versioner do
   describe "getting a version if none is set" do
     subject { Versioner.version }
-    it { should == "0.0.1" }
+    it { should == "0.0.0" }
   end
 
   describe "forcing the version" do

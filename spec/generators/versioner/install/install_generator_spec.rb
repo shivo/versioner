@@ -15,9 +15,9 @@ describe Versioner::InstallGenerator do
     describe 'config/versioner.yml' do
       subject { file('config/versioner.yml') }
       it { should exist }
-      it { should contain "major: 0" }
-      it { should contain "minor: 0" }
-      it { should contain "patch: 1" }
+      it { should contain ":major: 0" }
+      it { should contain ":minor: 0" }
+      it { should contain ":patch: 0" }
     end
 
     describe 'config/initializers/versioner.rb' do
