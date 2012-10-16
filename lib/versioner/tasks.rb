@@ -19,8 +19,8 @@ namespace :versioner do
     Versioner.increment_patch
   end
 
-  desc "Force a new version number"
-  task :force, :major, :minor, :patch => :environment do |t, args|
-    Versioner.force args[:arg1].to_i, args[:arg2].to_i, args[:arg3].to_i
+  desc "Force a new version number (required: major, minor, patch)"
+  task :force, [:major, :minor, :patch] => :environment do |t, args|
+    puts Versioner.force args.major.to_i, args.minor.to_i, args.patch.to_i
   end
 end
