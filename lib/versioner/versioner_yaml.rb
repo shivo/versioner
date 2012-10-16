@@ -65,11 +65,16 @@ module Versioner
     attr_accessor :data, :path
 
     def read
-      self.data = YAML.load(File.read(path)).with_indifferent_access
+      File.open(path, 'r') do |file|
+        data = file.read
+        self.data = YAML.load(data)
+      end
     end
 
     def write
-      YAML.dump data, File.open(path, 'w')
+      File.open(path, 'w') do |file|
+        YAML.dump(data, file)
+      end
     end
   end
 end
