@@ -48,6 +48,13 @@ Right now, the version is stored in YAML format, by default under config/version
 
 More storage back-end options are coming.
 
+## Roadmap
+
+* Fully support [Semantic Versioning](http://semver.org)
+* More storage back-ends
+* Extract the core into a new gem, versioner
+* More gems for other frameworks (e.g., Sinatra)
+
 ## Contributing
 
 1. Fork it
