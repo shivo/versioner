@@ -20,6 +20,11 @@ Then run the installer:
 
     $ rails generate versioner:install
 
+This adds these files:
+
+* **[RAILS_ROOT]/config/versioner.yml** - This is where the version number is stored.
+* **[RAILS_ROOT]/config/initializers/versioner.rb** - This is where you can configure options. The only option available right now is **storage_path**, which allows you to change the location of versioner.yml.
+
 ## Usage
 
 Version numbers follow the format *Major.Minor.Patch*.
