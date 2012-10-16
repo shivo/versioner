@@ -26,7 +26,7 @@ Version numbers follow the format *Major.Minor.Patch*.
 
 Force a new version number like this:
 
-    $ rake versioner:force[1, 0, 3]
+    $ rake versioner:force[1,0,3]
 
 Then you can update it:
 
