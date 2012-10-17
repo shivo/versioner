@@ -3,14 +3,14 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
-  gem.name          = "versioner-rails"
+  gem.name          = "versioner"
   gem.version       = "0.1.0"
   gem.authors       = ["ChaiONE"]
   gem.email         = ["joshua.rieken@chaione.com"]
   gem.summary       = %q{Super simple versioning for Rails apps}
   gem.description   = %q{This gem makes it easy to add and update a version number for your Rails app via rake tasks.
 The version is stored in a YAML file within your app.}
-  gem.homepage      = "https://github.com/chaione/versioner-rails"
+  gem.homepage      = "https://github.com/chaione/versioner"
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})

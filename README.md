@@ -1,4 +1,4 @@
-# versioner-rails
+# versioner
 
 This gem allows you to easily add, update, and retrieve a version number for your Rails application.
 
@@ -6,7 +6,7 @@ This gem allows you to easily add, update, and retrieve a version number for you
 
 Add this line to your application's Gemfile:
 
-    gem 'versioner-rails', :require => 'versioner'
+    gem 'versioner'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install versioner-rails
+    $ gem install versioner
 
 Then run the installer:
 
