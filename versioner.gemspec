@@ -4,12 +4,11 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name          = "versioner"
-  gem.version       = "0.1.0"
+  gem.version       = "0.2.0"
   gem.authors       = ["ChaiONE"]
   gem.email         = ["joshua.rieken@chaione.com"]
   gem.summary       = %q{Super simple versioning for Rails apps}
-  gem.description   = %q{This gem makes it easy to add and update a version number for your Rails app via rake tasks.
-The version is stored in a YAML file within your app.}
+  gem.description   = %q{Easily manage a version number for your Rails app. The version is stored in a YAML file within your app.}
   gem.homepage      = "https://github.com/chaione/versioner"
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
@@ -22,7 +21,8 @@ The version is stored in a YAML file within your app.}
   gem.add_development_dependency "rspec-rails", "~> 2.11.4"
   gem.add_development_dependency "guard", "~> 1.1.1"
   gem.add_development_dependency "guard-rspec", "~> 1.1.0"
-  gem.add_development_dependency "growl", "~> 1.0.3"
+  gem.add_development_dependency "rb-fsevent", "~> 0.9.1"
+  gem.add_development_dependency "ruby_gntp", "~> 0.3.4"
   gem.add_development_dependency "ammeter", "~> 0.2.8"
   gem.add_development_dependency "tzinfo", "~> 0.3.33"
 end
