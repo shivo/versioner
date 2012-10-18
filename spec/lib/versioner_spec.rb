@@ -18,7 +18,7 @@ describe Versioner do
       Versioner.increment_major
     end
     subject { Versioner.version }
-    it { should == "2.0.1" }
+    it { should == "2.0.0" }
   end
 
   describe "incrementing the minor version" do
@@ -27,7 +27,7 @@ describe Versioner do
       Versioner.increment_minor
     end
     subject { Versioner.version }
-    it { should == "1.1.1" }
+    it { should == "1.1.0" }
   end
 
   describe "incrementing the patch version" do
