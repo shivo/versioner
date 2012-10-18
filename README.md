@@ -27,7 +27,7 @@ This adds these files:
 
 ## Usage
 
-Version numbers follow the format *Major.Minor.Patch*. A major goal of this project is to follow [Semantic Versioning](http://semver.org) conventions: if a minor number is incremented, reset the patch to 0; if the major number is incremented, reset both minor and patch to 0.
+Version numbers follow the format **Major.Minor.Patch**. A major goal of this project is to follow [Semantic Versioning](http://semver.org) conventions: if minor is incremented, reset the patch to 0; if major is incremented, reset both minor and patch to 0.
 
 Force a new version number like this:
 
