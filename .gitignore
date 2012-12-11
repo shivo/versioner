@@ -17,3 +17,5 @@ test/version_tmp
 tmp
 spec/dummy/log
 spec/dummy/config/versioner.yml
+.project
+.rvmrc
