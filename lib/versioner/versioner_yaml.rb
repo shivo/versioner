@@ -8,7 +8,7 @@ module Versioner
     end
 
     def version
-      "#{major}.#{minor}.#{patch}"
+      "#{major}.#{minor}.#{patch}" + (build ? "+#{build}" : "" )
     end
 
     def major
@@ -22,11 +22,16 @@ module Versioner
     def patch
       data[:patch]
     end
+    
+    def build
+      data[:build]
+    end
 
-    def force(major, minor, patch)
+    def force(major, minor, patch, build = nil)
       self.major = major
       self.minor = minor
       self.patch = patch
+      self.build = build
       write
       version
     end
@@ -35,6 +40,7 @@ module Versioner
       self.major = major + 1
       self.minor = 0
       self.patch = 0
+      self.build = nil
       write
       version
     end
@@ -42,12 +48,14 @@ module Versioner
     def increment_minor
       self.minor = minor + 1
       self.patch = 0
+      self.build = nil
       write
       version
     end
 
     def increment_patch
       self.patch = patch + 1
+      self.build = nil
       write
       version
     end
@@ -79,6 +87,10 @@ module Versioner
 
     def patch=(num)
       data[:patch] = num
+    end
+    
+    def build=(str)
+      data[:build] = str
     end
   end
 end
