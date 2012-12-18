@@ -59,7 +59,13 @@ module Versioner
       write
       version
     end
-
+    
+    def set_build_from_git
+      self.build = "build.#{git_revcount}.#{git_revdate}"
+      write
+      version
+    end    
+    
     private
 
     attr_accessor :data, :path
@@ -87,10 +93,22 @@ module Versioner
 
     def patch=(num)
       data[:patch] = num
-    end
-    
+    end    
+
     def build=(str)
       data[:build] = str
+    end   
+    
+    def git_revcount
+      if File.exists?(".git")
+        `git rev-list --count HEAD`.strip
+      end
     end
+      
+    def git_revdate  
+      if File.exists?(".git")
+        `git show --date=short --pretty=format:%cd`.split("\n")[0].strip
+      end
+    end     
   end
 end

@@ -2,17 +2,17 @@ require 'railtie'
 require 'versioner/versioner_yaml'
 
 module Versioner
-  class << self
+  class << self    
     def api
-      @api = YamlBackend.new(storage_path)
+      @api ||= YamlBackend.new(storage_path)
     end
 
     def version
       api.version
     end
 
-    def force(major, minor, patch)
-      api.force major, minor, patch
+    def force(major, minor, patch, build = nil)
+      api.force major, minor, patch, build
     end
 
     def increment_major
@@ -26,6 +26,10 @@ module Versioner
     def increment_patch
       api.increment_patch
     end
+    
+    def set_build_from_git
+      api.set_build_from_git
+    end
 
     def config
       @config ||= Configuration.new
@@ -36,6 +40,9 @@ module Versioner
     end
 
     delegate :storage_path, :to => :config
+    
+    private
+    
   end
 
   class Configuration
