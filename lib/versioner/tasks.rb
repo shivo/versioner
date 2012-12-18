@@ -23,4 +23,9 @@ namespace :versioner do
   task :force, [:major, :minor, :patch] => :environment do |t, args|
     puts Versioner.force args.major.to_i, args.minor.to_i, args.patch.to_i
   end
+  
+  desc "Set build from git"
+  task :set_build_from_git => :environment do
+    puts Versioner.set_build_from_git
+  end
 end
